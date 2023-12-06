@@ -6,15 +6,15 @@
              >
 
     <FlexLayout Direction="Column" AlignContent="Center" HorizontalOptions="Center">
-        <Label Text="Ingrese el texto" FlexLayout.Order="1"/>
+        <Label Text="Ingrese el texto" FontSize="25" FlexLayout.Order="1"/>
         <Entry Placeholder="Ingresa texto" Text="{Binding InputText}"
-               TextColor="White"
-               BackgroundColor="Green"
-               FlexLayout.Order="2"
-               />
-        <Button Text="Calcular" Clicked="Calcular_Clicked" 
-                FlexLayout.Order="3"/>
-        
+           TextColor="White"
+           BackgroundColor="Green"
+           FlexLayout.Order="2"
+           />
+        <Button Text="Calcular" Command="{Binding CalculateCommand}" 
+            FlexLayout.Order="3"/>
+
         <Label Text="Resultados" FontSize="22"/>
         <Label Text="{Binding CountNumbers, StringFormat='Número de dígitos: {0}'}" />
         <Label Text="{Binding CountLetters, StringFormat='Número de letras: {0}'}" />
@@ -22,10 +22,8 @@
         <Label Text="{Binding CountUpperCase, StringFormat='Número de mayúsculas: {0}'}" />
         <Label Text="{Binding CountLowerCase, StringFormat='Número de minúsculas: {0}'}" />
         <Label Text="{Binding TotalCharacters, StringFormat='Total de caracteres: {0}'}" />
-
-
-
-        <Button Text="Limpiar" Clicked="Limpiar_Clicked"
-                FlexLayout.Order="5"/>
+        <Button Text="Limpiar" FlexLayout.Order="5"/>
+        
     </FlexLayout>
+
 </ContentPage>

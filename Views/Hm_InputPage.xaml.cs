@@ -9,15 +9,5 @@ public partial class Hm_InputPage : ContentPage
 		InitializeComponent();
         BindingContext = new HM_InputData();
     }
-    private void Calcular_Clicked(object sender, EventArgs e)
-    {
-        
-    }
-    private void Limpiar_Clicked(object sender, EventArgs e)
-    {
-
-
-        BindingContext = new HM_InputData();
-       
-    }
+    
 }
