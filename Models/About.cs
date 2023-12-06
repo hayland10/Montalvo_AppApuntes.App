@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Montalvo_AppApuntes.Models
+namespace Montalvo_ExamenP2.Models
 {
     class About
     {

@@ -1,19 +1,19 @@
 ﻿
-using Montalvo_AppApuntes.Views;
+using Montalvo_ExamenP2.Views;
 using System.Collections.ObjectModel;
 
-namespace Montalvo_AppApuntes.Models
+namespace Montalvo_ExamenP2.Models
 {
     internal class AllNotes
     {
-        public ObservableCollection<Note> Notes { get; set; } = new ObservableCollection<Note>();
+        public ObservableCollection<Note> Lista { get; set; } = new ObservableCollection<Note>();
 
         public AllNotes() =>
             LoadNotes();
 
         public void LoadNotes()
         {
-            Notes.Clear();
+            Lista.Clear();
 
             // Get the folder where the notes are stored.
             string appDataPath = FileSystem.AppDataDirectory;
@@ -37,7 +37,7 @@ namespace Montalvo_AppApuntes.Models
 
             // Add each note into the ObservableCollection
             foreach (Note note in notes)
-                Notes.Add(note);
+                Lista.Add(note);
         }
     }
 }

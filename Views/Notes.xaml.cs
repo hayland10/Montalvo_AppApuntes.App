@@ -1,4 +1,4 @@
-﻿namespace Montalvo_AppApuntes.Views;
+﻿namespace Montalvo_ExamenP2.Views;
 
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
 public partial class Notes : ContentPage

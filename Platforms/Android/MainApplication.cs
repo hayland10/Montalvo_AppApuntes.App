@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Montalvo_AppApuntes;
+namespace Montalvo_ExamenP2;
 
 [Application]
 public class MainApplication : MauiApplication

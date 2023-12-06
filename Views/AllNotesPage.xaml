@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Montalvo_AppApuntes.Views.AllNotesPage"
+             x:Class="Montalvo_ExamenP2.Views.AllNotesPage"
             Title="Your Notes">
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
@@ -10,7 +10,7 @@
 
     <!-- Display notes in a list -->
     <CollectionView x:Name="notesCollection"
-                        ItemsSource="{Binding Notes}"
+                        ItemsSource="{Binding Lista}"
                         Margin="20"
                         SelectionMode="Single"
                         SelectionChanged="notesCollection_SelectionChanged">
