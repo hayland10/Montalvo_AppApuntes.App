@@ -27,6 +27,9 @@
             <FlyoutItem Title="About" Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}">
                 <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" Route="AboutPage" />
             </FlyoutItem>
+            <FlyoutItem Title="HM_Conteo Caracteres" Icon="{OnPlatform 'contador.png', iOS='contador.png', MacCatalyst='contador.png'}">
+                <ShellContent ContentTemplate="{DataTemplate views:Hm_InputPage}" Route="Hm_InputPage" />
+            </FlyoutItem>
             <Shell.FlyoutFooter>
                 <Grid BackgroundColor="Green" Padding="10">
                     <Label Text="Examen P2_HaylandMontalvo"
