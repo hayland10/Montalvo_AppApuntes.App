@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Montalvo_ExamenP2;
+namespace Montalvo_AppApuntes;
 
 public class Program
 {

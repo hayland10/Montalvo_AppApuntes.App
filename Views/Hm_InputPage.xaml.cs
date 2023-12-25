@@ -1,6 +1,6 @@
 using Montalvo_AppApuntes.Models;
 
-namespace Montalvo_ExamenP2.Views;
+namespace Montalvo_AppApuntes.Views;
 
 public partial class Hm_InputPage : ContentPage
 {

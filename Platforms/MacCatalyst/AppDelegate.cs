@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Montalvo_ExamenP2;
+namespace Montalvo_AppApuntes;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

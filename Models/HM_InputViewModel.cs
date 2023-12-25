@@ -10,5 +10,6 @@ namespace Montalvo_AppApuntes.Models
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+
     }
 }

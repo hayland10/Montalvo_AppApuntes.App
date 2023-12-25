@@ -1,4 +1,4 @@
-﻿namespace Montalvo_ExamenP2;
+﻿namespace Montalvo_AppApuntes;
 
 public static class MauiProgram
 {
