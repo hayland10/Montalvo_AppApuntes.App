@@ -4,20 +4,20 @@ using System.Windows.Input;
 
 namespace Montalvo_AppApuntes.ViewModels;
 
-internal class NoteViewModel : ObservableObject, IQueryAttributable
+internal class HM_NoteViewModel : ObservableObject, IQueryAttributable
 {
     private Models.Note _note;
 
     public ICommand SaveCommand { get; private set; }
     public ICommand DeleteCommand { get; private set; }
-    public NoteViewModel()
+    public HM_NoteViewModel()
     {
         _note = new Models.Note();
         SaveCommand = new AsyncRelayCommand(Save);
         DeleteCommand = new AsyncRelayCommand(Delete);
     }
 
-    public NoteViewModel(Models.Note note)
+    public HM_NoteViewModel(Models.Note note)
     {
         _note = note;
         SaveCommand = new AsyncRelayCommand(Save);

@@ -1,8 +1,8 @@
 namespace Montalvo_AppApuntes.Views;
 
-public partial class AboutPage : ContentPage
+public partial class HM_AboutPage : ContentPage
 {
-    public AboutPage()
+    public HM_AboutPage()
     {
         InitializeComponent();
     }

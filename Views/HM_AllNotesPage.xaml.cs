@@ -1,8 +1,8 @@
 namespace Montalvo_AppApuntes.Views;
 
-public partial class AllNotesPage : ContentPage
+public partial class HM_AllNotesPage : ContentPage
 {
-    public AllNotesPage()
+    public HM_AllNotesPage()
     {
         InitializeComponent();
 

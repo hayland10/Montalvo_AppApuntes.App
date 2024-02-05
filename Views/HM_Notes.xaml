@@ -2,10 +2,10 @@
     
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Montalvo_AppApuntes.Views.Notes"
+             x:Class="Montalvo_AppApuntes.Views.HM_Notes"
              xmlns:viewModels="clr-namespace:Montalvo_AppApuntes.ViewModels">
     <ContentPage.BindingContext>
-        <viewModels:NoteViewModel />
+        <viewModels:HM_NoteViewModel />
     </ContentPage.BindingContext>
   
     <ScrollView>

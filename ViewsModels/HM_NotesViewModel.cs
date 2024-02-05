@@ -6,28 +6,28 @@ using System.Windows.Input;
 
 namespace Montalvo_AppApuntes.ViewModels;
 
-internal class NotesViewModel : IQueryAttributable
+internal class HM_NotesViewModel : IQueryAttributable
 {
-    public ObservableCollection<ViewModels.NoteViewModel> AllNotes { get; }
+    public ObservableCollection<ViewModels.HM_NoteViewModel> AllNotes { get; }
     public ICommand NewCommand { get; }
     public ICommand SelectNoteCommand { get; }
 
-    public NotesViewModel()
+    public HM_NotesViewModel()
     {
-        AllNotes = new ObservableCollection<ViewModels.NoteViewModel>(Models.Note.LoadAll().Select(n => new NoteViewModel(n)));
+        AllNotes = new ObservableCollection<ViewModels.HM_NoteViewModel>(Models.Note.LoadAll().Select(n => new HM_NoteViewModel(n)));
         NewCommand = new AsyncRelayCommand(NewNoteAsync);
-        SelectNoteCommand = new AsyncRelayCommand<ViewModels.NoteViewModel>(SelectNoteAsync);
+        SelectNoteCommand = new AsyncRelayCommand<ViewModels.HM_NoteViewModel>(SelectNoteAsync);
     }
 
     private async Task NewNoteAsync()
     {
-        await Shell.Current.GoToAsync(nameof(Views.Notes));
+        await Shell.Current.GoToAsync(nameof(Views.HM_Notes));
     }
 
-    private async Task SelectNoteAsync(ViewModels.NoteViewModel note)
+    private async Task SelectNoteAsync(ViewModels.HM_NoteViewModel note)
     {
         if (note != null)
-            await Shell.Current.GoToAsync($"{nameof(Views.Notes)}?load={note.Identifier}");
+            await Shell.Current.GoToAsync($"{nameof(Views.HM_Notes)}?load={note.Identifier}");
     }
 
     void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)
@@ -35,7 +35,7 @@ internal class NotesViewModel : IQueryAttributable
         if (query.ContainsKey("deleted"))
         {
             string noteId = query["deleted"].ToString();
-            NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
+            HM_NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
 
             // If note exists, delete it
             if (matchedNote != null)
@@ -44,7 +44,7 @@ internal class NotesViewModel : IQueryAttributable
         else if (query.ContainsKey("saved"))
         {
             string noteId = query["saved"].ToString();
-            NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
+            HM_NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
 
             // If note is found, update it
             if (matchedNote != null) { 
@@ -56,7 +56,7 @@ internal class NotesViewModel : IQueryAttributable
 
             // If note isn't found, it's new; add it.
             else
-                AllNotes.Insert(0, new NoteViewModel(Models.Note.Load(noteId)));
+                AllNotes.Insert(0, new HM_NoteViewModel(Models.Note.Load(noteId)));
 
         }
     }

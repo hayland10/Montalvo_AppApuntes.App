@@ -22,10 +22,10 @@
                 </Grid>
             </Shell.FlyoutHeader>
             <FlyoutItem Title="Notes" Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}">
-                <ShellContent ContentTemplate="{DataTemplate views:AllNotesPage}" Route="MainPage" />
+                <ShellContent ContentTemplate="{DataTemplate views:HM_AllNotesPage}" Route="MainPage" />
             </FlyoutItem>
             <FlyoutItem Title="About" Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}">
-                <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" Route="AboutPage" />
+                <ShellContent ContentTemplate="{DataTemplate views:HM_AboutPage}" Route="AboutPage" />
             </FlyoutItem>
             <FlyoutItem Title="HM_Conteo Caracteres" Icon="{OnPlatform 'contador.png', iOS='contador.png', MacCatalyst='contador.png'}">
                 <ShellContent ContentTemplate="{DataTemplate views:Hm_InputPage}" Route="Hm_InputPage" />
